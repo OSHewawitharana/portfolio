@@ -1,0 +1,15 @@
+<svg width="204" height="204" viewBox="0 0 204 204" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="organizedGradient" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#4CAF50"/>
+            <stop offset="100%" stop-color="#2E7D32"/>
+        </linearGradient>
+    </defs>
+
+    <circle cx="102" cy="102" r="90" fill="url(#organizedGradient)" />
+
+    <!-- Checklist Icon -->
+    <rect x="60" y="60" width="84" height="84" fill="white"/>
+    <path d="M75 85 L90 100 L120 70" stroke="green" stroke-width="5"/>
+    <path d="M75 120 L90 135 L120 105" stroke="green" stroke-width="5"/>
+</svg>

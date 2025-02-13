@@ -1,0 +1,17 @@
+<svg width="204" height="204" viewBox="0 0 204 204" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="leadershipGradient" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#FFD700"/>
+            <stop offset="100%" stop-color="#FFA500"/>
+        </linearGradient>
+    </defs>
+
+    <circle cx="102" cy="102" r="90" fill="url(#leadershipGradient)" />
+
+    <!-- Leader Icon -->
+    <circle cx="102" cy="70" r="25" fill="white"/>
+    <path d="M72 140 C72 115, 132 115, 132 140" stroke="white" stroke-width="6" stroke-linecap="round"/>
+
+    <!-- Arms Raised -->
+    <path d="M75 90 L102 115 L129 90" stroke="white" stroke-width="6" stroke-linecap="round"/>
+</svg>

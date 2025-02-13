@@ -1,0 +1,24 @@
+<svg width="204" height="204" viewBox="0 0 204 204" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background Gradient -->
+    <defs>
+        <linearGradient id="collaboratorGradient" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#4A90E2"/>
+            <stop offset="100%" stop-color="#50E3C2"/>
+        </linearGradient>
+    </defs>
+
+    <circle cx="102" cy="102" r="90" fill="url(#collaboratorGradient)" />
+
+    <!-- Main Person Icon -->
+    <circle cx="102" cy="70" r="25" fill="white"/>
+    <path d="M72 140 C72 120, 132 120, 132 140" stroke="white" stroke-width="6" stroke-linecap="round"/>
+
+    <!-- Left Person -->
+    <circle cx="60" cy="80" r="18" fill="white" opacity="0.8"/>
+    <path d="M45 130 C45 115, 75 115, 75 130" stroke="white" stroke-width="5" stroke-linecap="round" opacity="0.8"/>
+
+    <!-- Right Person -->
+    <circle cx="144" cy="80" r="18" fill="white" opacity="0.8"/>
+    <path d="M129 130 C129 115, 159 115, 159 130" stroke="white" stroke-width="5" stroke-linecap="round" opacity="0.8"/>
+
+</svg>
