@@ -267,7 +267,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-weight: 700;
   letter-spacing: 0.8px;
   padding: 8px 10px;
-  background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+  background: linear-gradient(90.21deg, rgba(54, 170, 69, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
   border: 1px solid rgba(255, 255, 255, 0.5);
   font-size: 20px;
   margin: 16px 0;
@@ -340,7 +340,7 @@ button a {
   margin-bottom: 60px;
 }
 .skill .skill-bx .table td {
-  padding: 30px; /* Increases row height */
+  padding: 10px; /* Increases row height */
   vertical-align: middle; /* Aligns content properly */
   border: 1px solid rgba(255, 255, 255, 0.2); /* Makes the border slightly visible */
 }
@@ -362,9 +362,6 @@ button a {
   height: 40px;
   object-fit: contain;
 }
-
-
-
 .skill-bx {
   background: linear-gradient(135deg, #1E1E2E 0%, #4C5270 100%);;
   border-radius: 64px;
@@ -389,7 +386,7 @@ button a {
   position: relative;
 }
 .skill-slider .item img {
-  width: 50%;
+  width: 80%;
   margin: 0 auto 10px auto;
 }
 .background-image-left {
@@ -449,7 +446,7 @@ button a {
   position: absolute;
   width: 0;
   height: 100%;
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  background: linear-gradient(135deg, #0f9eb7, #1221d0, #084919, #00c6ff);
   top: 0;
   left: 0;
   z-index: -1;
@@ -528,7 +525,9 @@ button a {
 
 /************ Projects Css ************/
 .contact {
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  background: linear-gradient(135deg, #171b2c 0%, #7287a9 100%) no-repeat top center;
+
+
   padding: 60px 0 200px 0;
 }
 .contact img {
@@ -538,6 +537,7 @@ button a {
   font-size: 45px;
   font-weight: 700;
   margin-bottom: 30px;
+  text-align: center;
 }
 .contact form input, .contact form textarea {
   width: 100%;
@@ -545,7 +545,7 @@ button a {
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 20px;
   color: #fff;
-  margin: 0 0 8px 0;
+  margin: 12px 0 8px 0;
   padding: 18px 26px;
   font-weight: 500;
   font-size: 18px;
@@ -559,120 +559,76 @@ button a {
 .contact form input::placeholder, .contact form textarea::placeholder {
   font-size: 16px;
   font-weight: 400;
-  color: #fff;
+  color: #918989;
 }
 .contact form input:focus::placeholder, .contact form textarea:focus::placeholder {
   color: #121212;
   opacity: 0.8;
 }
-.contact form button {
-  font-weight: 700;
-  color: #000;
-  background-color: #fff;
-  padding: 14px 48px;
-  font-size: 18px;
-  margin-top: 25px;
-  border-radius: 0;
+.submit-btn-bx button {
   position: relative;
-  transition: 0.3s ease-in-out;
+  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  color: #fff;
+  padding: 12px 32px;
+  /*color: #1a1a1a;*/
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
-.contact form button span {
-  z-index: 1;
-  position: relative;
+.submit-btn-bx button::after {
+  content: "";
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2px;
+  background: linear-gradient(135deg, #0f9eb7, #1221d0, #084919, #00c6ff);
+  color: #fff;
+  transition: width 0.3s ease;
 }
-.contact form button:hover {
+.submit-btn-bx button:hover {
+  background: linear-gradient(135deg, #0f9eb7, #1221d0, #084919, #00c6ff);
   color: #fff;
 }
-.contact form button::before {
-  content: "";
-  background: #121212;
-  width: 0;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-  transition: 0.3s ease-in-out;
-}
-.contact form button:hover::before {
-  width: 100%;
-}
-
-/************ Footer Css ************/
-.footer {
-  padding: 0 0 50px 0;
-  background-image: url('./assets/img/footer-bg.png');
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.newsletter-bx {
-  background: #FFFFFF;
-  border-radius: 55px;
-  color: #121212;
-  padding: 85px 125px;
-  margin-bottom: 80px;
-  margin-top: -122px;
-}
-.newsletter-bx h3 {
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  line-height: 1.2em;
-}
-.new-email-bx {
-  background: #fff;
-  padding: 5px;
-  border-radius: 20px;
-  position: relative;
-  z-index: 0;
+.alert {
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  padding: 12px 16px;
+  border-radius: 8px;
+  position: relative;
+  margin: 1rem auto;
+  width: 80%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.new-email-bx::before {
-  content: "";
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
-  border-radius: 20px;
-  position: absolute;
-  z-index: -1;
-  top: -1px;
-  left: -1px;
-  bottom: -1px;
-  right: -1px;
+.alert-message {
+  flex: 1;
+  text-align: center;
+  font-size: 1rem;
 }
-.new-email-bx::after {
-  content: "";
-  background: #fff;
-  border-radius: 20px;
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: inherit;
+  cursor: pointer;
+  padding: 0 8px;
+  transition: color 0.3s ease;
 }
-.new-email-bx input {
-  width: 100%;
-  color: #121212;
-  font-weight: 500;
-  background: transparent;
-  border: 0;
-  padding: 0 15px;
+.close-btn:hover,
+.close-btn:focus {
+  color: #333;
+  outline: none;
 }
-.new-email-bx button {
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
-  padding: 20px 65px;
-  color: #fff;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  border-radius: 18px;
+.field-error {
+  color: #fc3555;
+  font-size: 0.8rem;
+  margin-top: 4px;
+  display: block;
 }
-.footer img {
-  width: 26%;
-}
-.footer p {
-  font-weight: 400;
-  font-size: 14px;
-  color: #B8B8B8;
-  letter-spacing: 0.5px;
-  margin-top: 20px;
+.required-asterisk {
+  color: #e60023;
+  margin-left: 2px;
 }

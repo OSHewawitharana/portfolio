@@ -39,19 +39,19 @@ export const Skills = () => {
         superLargeDesktop: {
             // the naming can be any, depends on you.
             breakpoint: { max: 4000, min: 3000 },
-            items: 8
+            items: 5
         },
         desktop: {
             breakpoint: { max: 3000, min: 1024 },
-            items: 5
+            items: 3
         },
         tablet: {
             breakpoint: { max: 1024, min: 464 },
-            items: 3
+            items: 2
         },
         mobile: {
             breakpoint: { max: 464, min: 0 },
-            items: 2
+            items: 1
         }
     };
 
@@ -135,27 +135,27 @@ export const Skills = () => {
                             <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                                 <div className="item">
                                     <img src={communicationSkill} alt="Image" />
-                                    <h5>Communication Skill</h5>
+                                    {/*<h5>Communication Skill</h5>*/}
                                 </div>
                                 <div className="item">
                                     <img src={collaborator} alt="Image" />
-                                    <h5>Collaborator</h5>
+                                    {/*<h5>Collaborator</h5>*/}
                                 </div>
                                 <div className="item">
                                     <img src={eventOrganizing} alt="Image" />
-                                    <h5>Event Organizing</h5>
+                                    {/*<h5>Event Organizing</h5>*/}
                                 </div>
                                 <div className="item">
                                     <img src={leadership} alt="Image" />
-                                    <h5>Leadership</h5>
+                                    {/*<h5>Leadership</h5>*/}
                                 </div>
                                 <div className="item">
                                     <img src={wellOrganized} alt="Image" />
-                                    <h5>Well-Organized</h5>
+                                    {/*<h5>Well-Organized</h5>*/}
                                 </div>
                                 <div className="item">
                                     <img src={attentionToDetail} alt="Image" />
-                                    <h5>Attention To Details</h5>
+                                    {/*<h5>Attention To Details</h5>*/}
                                 </div>
                             </Carousel>
                         </div>
