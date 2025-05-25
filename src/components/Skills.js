@@ -134,27 +134,27 @@ export const Skills = () => {
 
                             <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                                 <div className="item">
-                                    <img src={communicationSkill} alt="Image" />
+                                    <img src={communicationSkill} alt="Communication Skill" />
                                     {/*<h5>Communication Skill</h5>*/}
                                 </div>
                                 <div className="item">
-                                    <img src={collaborator} alt="Image" />
+                                    <img src={collaborator} alt="Collaborator" />
                                     {/*<h5>Collaborator</h5>*/}
                                 </div>
                                 <div className="item">
-                                    <img src={eventOrganizing} alt="Image" />
+                                    <img src={eventOrganizing} alt="Event Organizing" />
                                     {/*<h5>Event Organizing</h5>*/}
                                 </div>
                                 <div className="item">
-                                    <img src={leadership} alt="Image" />
+                                    <img src={leadership} alt="Leadership" />
                                     {/*<h5>Leadership</h5>*/}
                                 </div>
                                 <div className="item">
-                                    <img src={wellOrganized} alt="Image" />
+                                    <img src={wellOrganized} alt="Well Organized" />
                                     {/*<h5>Well-Organized</h5>*/}
                                 </div>
                                 <div className="item">
-                                    <img src={attentionToDetail} alt="Image" />
+                                    <img src={attentionToDetail} alt="Attention To Detail" />
                                     {/*<h5>Attention To Details</h5>*/}
                                 </div>
                             </Carousel>
