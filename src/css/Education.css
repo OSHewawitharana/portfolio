@@ -1,0 +1,43 @@
+.education-section {
+    background: linear-gradient(135deg, #f0f8ff 0%, #e6f0ff 100%);
+    padding: 60px 20px;
+    border-radius: 20px;
+    margin: 40px auto;
+    max-width: 1000px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.education-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: #003366;
+}
+
+.education-accordion .accordion-button {
+    background-color: #e6f0ff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #003366;
+    transition: background-color 0.3s ease;
+}
+
+.education-accordion .accordion-button:not(.collapsed) {
+    background-color: #cce0ff;
+}
+
+.education-accordion .accordion-body {
+    background-color: #ffffff;
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+.education-accordion .accordion-item {
+    border-radius: 10px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    border: 1px solid #cce0ff;
+}
+

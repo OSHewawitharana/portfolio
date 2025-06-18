@@ -1,0 +1,125 @@
+/* Banner Section */
+.banner {
+    margin-top: 0;
+    padding: 200px 0 100px;
+    background: linear-gradient(135deg, #1E1E2E, #4C5270);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+/* Tagline */
+.banner .tagline {
+    font-weight: 400;
+    letter-spacing: 0.8px;
+    font-size: 22px;
+    margin-bottom: 16px;
+    display: inline-block;
+    background: linear-gradient(90deg, rgba(255,255,255,0.2), rgba(255,255,255,0));
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+
+/* Heading */
+.banner h1 {
+    font-size: 56px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    animation: slideInDown 1s ease-in-out;
+}
+
+/* Paragraph */
+.banner p {
+    color: #CCCCCC;
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 90%;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Button */
+.banner button {
+    margin-top: 20px;
+    background: linear-gradient(90deg, #36aa45, #4a2fbd);
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.banner button:hover {
+    background: #fca311;
+    color: white;
+}
+
+.banner button a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Profile Image */
+.banner img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    animation: floatImage 5s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatImage {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .banner {
+        padding: 120px 0 60px;
+    }
+
+    .banner h1 {
+        font-size: 42px;
+    }
+
+    .banner p {
+        font-size: 16px;
+        width: 100%;
+    }
+
+    .banner img {
+        width: 200px;
+        height: 200px;
+    }
+}

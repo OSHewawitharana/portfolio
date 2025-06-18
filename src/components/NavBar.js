@@ -1,4 +1,4 @@
-import {Container, Nav, Navbar } from "react-bootstrap";
+import {Container, Nav, Navbar} from "react-bootstrap";
 import {useEffect, useState} from "react";
 
 import logo from '../assets/img/logo.svg';
@@ -6,10 +6,12 @@ import linkedin from '../assets/img/linkedin.svg';
 import github from '../assets/img/github.svg';
 import email from '../assets/img/email.svg';
 import {HashLink} from "react-router-hash-link";
-import { BrowserRouter as Router } from "react-router-dom";
+import {BrowserRouter as Router} from "react-router-dom";
+import "../css/Navbar.css";
+
 export const NavBar = () => {
-    const [ activeLink, setActiveLink ] = useState("home");
-    const [ scrolled, setScrolled ] = useState(false);
+    const [activeLink, setActiveLink] = useState("home");
+    const [scrolled, setScrolled] = useState(false);
 
     const contactLinks = {
         linkedin: "https://www.linkedin.com/in/oshewawitharana/",
@@ -40,22 +42,36 @@ export const NavBar = () => {
             <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
                 <Container>
                     <Navbar.Brand href="/">
-                        <img src={logo} alt="OH" />
+                        <img className="logo" src={logo} alt="OH"/>
                     </Navbar.Brand>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" >
+                    <Navbar.Toggle aria-controls="basic-navbar-nav">
                         <span className="navbar-toggler-icon"></span>
                     </Navbar.Toggle>
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
-                            <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
-                            <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
+                            <Nav.Link href="#home"
+                                      className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'}
+                                      onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
+                            <Nav.Link href="#workExperience"
+                                      className={activeLink === 'workExperience' ? 'active navbar-link' : 'navbar-link'}
+                                      onClick={() => onUpdateActiveLink('skills')}>Work Experience</Nav.Link>
+                            <Nav.Link href="#education"
+                                      className={activeLink === 'education' ? 'active navbar-link' : 'navbar-link'}
+                                      onClick={() => onUpdateActiveLink('skills')}>Education</Nav.Link>
+                            <Nav.Link href="#skills"
+                                      className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'}
+                                      onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
+                            <Nav.Link href="#projects"
+                                      className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'}
+                                      onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
                         </Nav>
                         <span className="navbar-text">
                         <div className="social-icon">
-                            <a href={contactLinks.linkedin} target="_blank"  rel="noopener noreferrer"><img src={linkedin} alt="" /></a>
-                            <a href={contactLinks.github} target="_blank"  rel="noopener noreferrer"><img src={github} alt="" /></a>
-                            <a href={contactLinks.email}  rel="noopener noreferrer"><img src={email} alt="" /></a>
+                            <a href={contactLinks.linkedin} target="_blank" rel="noopener noreferrer"><img
+                                src={linkedin} alt=""/></a>
+                            <a href={contactLinks.github} target="_blank" rel="noopener noreferrer"><img src={github}
+                                                                                                         alt=""/></a>
+                            <a href={contactLinks.email} rel="noopener noreferrer"><img src={email} alt=""/></a>
                         </div>
                          <HashLink to='#connect'>
                             <button className="vvd"><span>Let’s Connect</span></button>
@@ -65,6 +81,5 @@ export const NavBar = () => {
                 </Container>
             </Navbar>
         </Router>
-
     );
 }

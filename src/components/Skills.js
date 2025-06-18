@@ -21,7 +21,7 @@ import confluence from "../assets/img/confluence.svg";
 import slack from "../assets/img/slack.svg";
 import splunk from "../assets/img/splunk.svg";
 import intelij from "../assets/img/intelij-ide.svg";
-import bitbucket from "../assets/img/bit-bucket.svg";
+import bitbucket from "../assets/img/bitbucket.svg";
 import collaborator from "../assets/img/collaborator.svg";
 import leadership from "../assets/img/leadership.svg";
 import eventOrganizing from "../assets/img/event-organizing.svg";
@@ -30,131 +30,125 @@ import attentionToDetail from "../assets/img/attention-to-detail.svg";
 import communicationSkill from "../assets/img/communication-skill.svg";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import colorSharp from "../assets/img/color-sharp.png"
-import {Table} from "react-bootstrap";
+import '../css/Skills.css';
 
 export const Skills = () => {
 
     const responsive = {
         superLargeDesktop: {
             // the naming can be any, depends on you.
-            breakpoint: { max: 4000, min: 3000 },
+            breakpoint: {max: 4000, min: 3000},
             items: 5
         },
         desktop: {
-            breakpoint: { max: 3000, min: 1024 },
-            items: 3
+            breakpoint: {max: 3000, min: 1024},
+            items: 4
         },
         tablet: {
-            breakpoint: { max: 1024, min: 464 },
-            items: 2
+            breakpoint: {max: 1024, min: 464},
+            items: 3
         },
         mobile: {
-            breakpoint: { max: 464, min: 0 },
+            breakpoint: {max: 464, min: 0},
             items: 1
         }
     };
 
     const skillCategories = {
         "Programming Languages": [
-            { name: "Java", logo: java },
-            { name: "PHP", logo: php },
-            { name: "JavaScript", logo: javascript },
-            { name: "TypeScript", logo: typescript },
-            { name: "HTML", logo: html },
-            { name: "CSS", logo: css },
+            {name: "Java", logo: java},
+            {name: "PHP", logo: php},
+            {name: "JavaScript", logo: javascript},
+            {name: "TypeScript", logo: typescript},
+            {name: "HTML", logo: html},
+            {name: "CSS", logo: css},
         ],
         "Frontend Frameworks": [
-            { name: "React.js", logo: react },
-            { name: "Angular", logo: angular },
+            {name: "React.js", logo: react},
+            {name: "Angular", logo: angular},
         ],
         "Backend Frameworks": [
-            { name: "Spring Boot", logo: sb },
-            { name: "Laravel", logo: laravel },
+            {name: "Spring Boot", logo: sb},
+            {name: "Laravel", logo: laravel},
         ],
         "Databases": [
-            { name: "MySQL", logo: mysql },
-            { name: "PostgresSQL", logo: postgresql },
-            { name: "DynamoDB", logo: dynamodb },
+            {name: "MySQL", logo: mysql},
+            {name: "PostgresSQL", logo: postgresql},
+            {name: "DynamoDB", logo: dynamodb},
 
         ],
         "Software Architecture": [
-            { name: "Microservices", logo: microservice }
+            {name: "Microservices", logo: microservice}
         ],
         "Cloud & CI/CD": [
-            { name: "AWS", logo: aws },
-            { name: "Github Action", logo: githubAction },
-            { name: "Docker", logo: docker }
+            {name: "AWS", logo: aws},
+            {name: "Github Action", logo: githubAction},
+            {name: "Docker", logo: docker}
         ],
         "Version Control": [
-            { name: "Git", logo: git },
-            { name: "Jira", logo: jira },
-            { name: "Bit Bucket", logo: bitbucket },
-            { name: "Confluence", logo: confluence },
+            {name: "Git", logo: git},
+            {name: "Jira", logo: jira},
+            {name: "Bit Bucket", logo: bitbucket},
+            {name: "Confluence", logo: confluence},
         ],
         "Other": [
-            { name: "Splunk", logo: splunk },
-            { name: "Slack", logo: slack },
-            { name: "Intelij IDE", logo: intelij }
+            {name: "Splunk", logo: splunk},
+            {name: "Slack", logo: slack},
+            {name: "Intelij IDE", logo: intelij}
         ]
     };
     return (
-        <section className="skill" id="skills">
+        <section className="skills-section" id="skills">
             <div className="container">
                 <div className="row">
                     <div className="col-12">
                         <div className="skill-bx wow zoomIn">
                             <h2>Skills</h2>
-                            <p>"Proficient in programming, frameworks, databases, and DevOps tools.
-                                Experienced in building scalable applications, managing cloud services, and implementing efficient architectures."</p>
-
-                            <Table striped bordered hover responsive>
-                                <tbody>
+                            <div className="row skill-main">
                                 {Object.entries(skillCategories).map(([category, skills]) => (
-                                    <tr key={category}>
-                                        <td className="text-left font-semibold">{category}</td>
-                                        <td>
-                                            <div className="d-flex flex-wrap gap-3">
-                                                {skills.map((skill, index) => (
-                                                    <div key={index} className="d-flex align-items-center gap-2">
-                                                        <img src={skill.logo} alt={skill.name} className="skill-logo" width="30" height="30" />
-                                                        <span>{skill.name}</span>
-                                                    </div>
-                                                ))}
+                                    <div className="col-md-6 col-lg-3 mb-3" key={category}>
+                                        <div className="card h-100 shadow-sm border-0">
+                                            <div className="card-body">
+                                                <h5 className="card-title skill-category-title">{category}</h5>
+                                                <div className="logos-grid mt-2">
+                                                    {skills.map((skill, index) => (
+                                                        <div key={index} className="logo-item" title={skill.name}>
+                                                            <img src={skill.logo} alt={skill.name}/>
+                                                        </div>
+                                                    ))}
+                                                </div>
                                             </div>
-                                        </td>
-                                    </tr>
+                                        </div>
+                                    </div>
                                 ))}
-                                </tbody>
-                            </Table>
+                            </div>
+
 
                             <h2>Soft Skills</h2>
-                            <p>"Strong in teamwork, leadership, and communication.
-                                Skilled in organizing, collaborating, and problem-solving to drive success in dynamic environments."</p>
-
-                            <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
+                            <Carousel responsive={responsive} infinite={true}
+                                      className="owl-carousel owl-theme skill-slider">
                                 <div className="item">
-                                    <img src={communicationSkill} alt="Communication Skill" />
+                                    <img src={communicationSkill} alt="Communication Skill"/>
                                     {/*<h5>Communication Skill</h5>*/}
                                 </div>
                                 <div className="item">
-                                    <img src={collaborator} alt="Collaborator" />
+                                    <img src={collaborator} alt="Collaborator"/>
                                     {/*<h5>Collaborator</h5>*/}
                                 </div>
                                 <div className="item">
-                                    <img src={eventOrganizing} alt="Event Organizing" />
+                                    <img src={eventOrganizing} alt="Event Organizing"/>
                                     {/*<h5>Event Organizing</h5>*/}
                                 </div>
                                 <div className="item">
-                                    <img src={leadership} alt="Leadership" />
+                                    <img src={leadership} alt="Leadership"/>
                                     {/*<h5>Leadership</h5>*/}
                                 </div>
                                 <div className="item">
-                                    <img src={wellOrganized} alt="Well Organized" />
+                                    <img src={wellOrganized} alt="Well Organized"/>
                                     {/*<h5>Well-Organized</h5>*/}
                                 </div>
                                 <div className="item">
-                                    <img src={attentionToDetail} alt="Attention To Detail" />
+                                    <img src={attentionToDetail} alt="Attention To Detail"/>
                                     {/*<h5>Attention To Details</h5>*/}
                                 </div>
                             </Carousel>
@@ -162,7 +156,7 @@ export const Skills = () => {
                     </div>
                 </div>
             </div>
-            <img className="background-image-left" src={colorSharp} alt="Background" />
+            {/*<img className="background-image-left" src={colorSharp} alt="Background" />*/}
         </section>
     );
 }

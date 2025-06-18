@@ -1,6 +1,6 @@
-import { useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
-// import contactImg from "../assets/img/contact-img.svg";
+import {useState} from "react";
+import {Container, Row, Col} from "react-bootstrap";
+import '../css/ContactForm.css';
 import TrackVisibility from 'react-on-screen';
 
 export const Contact = () => {
@@ -23,7 +23,7 @@ export const Contact = () => {
             [category]: value
         })
         if (formErrors[category]) {
-            setFormErrors({ ...formErrors, [category]: '' });
+            setFormErrors({...formErrors, [category]: ''});
         }
     }
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -67,9 +67,9 @@ export const Contact = () => {
         let result = await response.json();
         setFormDetails(formInitialDetails);
         if (result.code === 200) {
-            setStatus({ success: true, message: 'Message sent successfully'});
+            setStatus({success: true, message: 'Message sent successfully'});
         } else {
-            setStatus({ success: false, message: 'Something went wrong, please try again later.'});
+            setStatus({success: false, message: 'Something went wrong, please try again later.'});
         }
         setVisible(true);
     };
@@ -82,14 +82,16 @@ export const Contact = () => {
                     </Col>
                     <Col size={12} md={8}>
                         <TrackVisibility>
-                            {({ isVisible }) =>
+                            {({isVisible}) =>
                                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                                     <h2>Get In Touch</h2>
                                     {
                                         status.message && visible &&
-                                        <div className={`alert ${status.success === false ? 'alert-danger danger' : 'alert-success success'}`}>
+                                        <div
+                                            className={`alert ${status.success === false ? 'alert-danger danger' : 'alert-success success'}`}>
                                             <span className="alert-message">{status.message}</span>
-                                            <button className="close-btn" aria-label="Close" onClick={() => setStatus(false )}>
+                                            <button className="close-btn" aria-label="Close"
+                                                    onClick={() => setStatus(false)}>
                                                 &times;
                                             </button>
                                         </div>
@@ -100,34 +102,44 @@ export const Contact = () => {
                                                 <label>
                                                     First Name
                                                 </label>
-                                                <input type="text" value={formDetails.firstName} placeholder="John" onChange={(e) => onFormUpdate('firstName', e.target.value)} />
+                                                <input type="text" value={formDetails.firstName} placeholder="John"
+                                                       onChange={(e) => onFormUpdate('firstName', e.target.value)}/>
                                             </Col>
                                             <Col size={12} sm={6} className="px-1">
                                                 <label>
                                                     Last Name
                                                 </label>
-                                                <input type="text" value={formDetails.lastName} placeholder="Doe" onChange={(e) => onFormUpdate('lastName', e.target.value)}/>
+                                                <input type="text" value={formDetails.lastName} placeholder="Doe"
+                                                       onChange={(e) => onFormUpdate('lastName', e.target.value)}/>
                                             </Col>
                                             <Col size={12} sm={6} className="px-1">
                                                 <label>
                                                     Email <span className="required-asterisk">*</span>
                                                 </label>
-                                                <input type="email" value={formDetails.email} placeholder="johndoe@gmail.com" onChange={(e) => onFormUpdate('email', e.target.value)} />
-                                                {formErrors.email && <small className="field-error">{formErrors.email}</small>}
+                                                <input type="email" value={formDetails.email}
+                                                       placeholder="johndoe@gmail.com"
+                                                       onChange={(e) => onFormUpdate('email', e.target.value)}/>
+                                                {formErrors.email &&
+                                                    <small className="field-error">{formErrors.email}</small>}
                                             </Col>
                                             <Col size={12} sm={6} className="px-1">
                                                 <label>
-                                                    Phone No.  <span className="required-asterisk">*</span>
+                                                    Phone No. <span className="required-asterisk">*</span>
                                                 </label>
-                                                <input type="tel" value={formDetails.phone} placeholder="+61405212452" onChange={(e) => onFormUpdate('phone', e.target.value)}/>
-                                                {formErrors.phone && <small className="field-error">{formErrors.phone}</small>}
+                                                <input type="tel" value={formDetails.phone} placeholder="+61405212452"
+                                                       onChange={(e) => onFormUpdate('phone', e.target.value)}/>
+                                                {formErrors.phone &&
+                                                    <small className="field-error">{formErrors.phone}</small>}
                                             </Col>
                                             <Col size={12} className="px-1">
                                                 <label>
                                                     Message <span className="required-asterisk">*</span>
                                                 </label>
-                                                <textarea rows="6" value={formDetails.message} placeholder="Write your message here" onChange={(e) => onFormUpdate('message', e.target.value)}></textarea>
-                                                {formErrors.message && <small className="field-error">{formErrors.message}</small>}
+                                                <textarea rows="6" value={formDetails.message}
+                                                          placeholder="Write your message here"
+                                                          onChange={(e) => onFormUpdate('message', e.target.value)}></textarea>
+                                                {formErrors.message &&
+                                                    <small className="field-error">{formErrors.message}</small>}
                                                 <div className="d-flex justify-content-center submit-btn-bx">
                                                     <button type="submit"><span>{buttonText}</span></button>
                                                 </div>
